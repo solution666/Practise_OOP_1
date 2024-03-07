@@ -156,7 +156,7 @@ const benefits = {
 };
 
 class ContactDetails {
-    constructor(mobileNumbers) {
+    constructor(mobileNumbers, mobileOperator, monthlySubscriptionFee) {
 
         if(!mobileNumbers || mobileNumbers.length === 0) {
             throw new Error("Для контактних даних потрібно вказати щонайменше один мобільний номер");
@@ -167,8 +167,8 @@ class ContactDetails {
         }
 
         this.mobileNumbers = mobileNumbers;
-        this.mobileOperator = "";
-        this.monthlySubscriptionFee = 0;
+        this.mobileOperator = mobileOperator;
+        this.monthlySubscriptionFee = monthlySubscriptionFee;
     }
 
     addMobileNumber(mobileNumber) {
@@ -268,6 +268,22 @@ class DBForms {
             });
         });
         return count;
+    }
+
+    // Отримати N абонентів, які витрачають на мобільний зв'язок найбільше
+    getTopNMobileSpending(N) {
+        const formsSortedBySpending = this.forms.slice().sort((a, b) => {
+            return b.contactDetails.monthlySubscriptionFee - a.contactDetails.monthlySubscriptionFee;
+        });
+        return formsSortedBySpending.slice(0, N);
+    }
+
+    // Отримати N абонентів, які витрачають на мобільний зв'язок найменше
+    getBottomNMobileSpending(N) {
+        const formsSortedBySpending = this.forms.slice().sort((a, b) => {
+            return a.contactDetails.monthlySubscriptionFee - b.contactDetails.monthlySubscriptionFee;
+        });
+        return formsSortedBySpending.slice(0, N);
     }
 }
 
