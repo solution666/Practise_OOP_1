@@ -1,0 +1,38 @@
+[
+    {
+        "topic": "Introduction to Programming",
+        "description": "Overview of the history of programming, basic concepts, and programming languages."
+    },
+    {
+        "topic": "Algorithms and Data Structures Basics",
+        "description": "Understanding algorithms, their design, analysis, and the role of data structures in programming."
+    },
+    {
+        "topic": "Web Development",
+        "description": "Introduction to web technologies, HTML, CSS, JavaScript, and server-side programming languages."
+    },
+    {
+        "topic": "Mobile Development",
+        "description": "Overview of major mobile platforms (Android and iOS) and their programming languages (Java, Kotlin, Swift)."
+    },
+    {
+        "topic": "Databases and SQL",
+        "description": "Introduction to databases, the SQL language, and basic data manipulation operations."
+    },
+    {
+        "topic": "Software Architecture",
+        "description": "Overview of software design principles, design patterns, and architectural patterns."
+    },
+    {
+        "topic": "Artificial Intelligence and Machine Learning",
+        "description": "Introduction to artificial intelligence, machine learning, and basic algorithms for data processing and prediction."
+    },
+    {
+        "topic": "Internet of Things (IoT)",
+        "description": "Overview of the IoT concept, microcontrollers, network protocols, and applications."
+    },
+    {
+        "topic": "Career in Programming",
+        "description": "Exploring career opportunities in programming, recommendations for learning, building portfolios, and job searching."
+    }
+]
