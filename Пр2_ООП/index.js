@@ -27,7 +27,7 @@ class PersonalInformationForm {
         });
     }
 
-    removeInterest(languageName) {
+    removeLanguage(languageName) {
         for (let i = 0; i < this.languages.length; i++) {
             if (this.languages[i].languageName === languageName) {
                 this.languages.splice(i, 1);
